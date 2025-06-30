@@ -14,7 +14,7 @@ export default function Footer() {
             className="flex items-center space-x-3 opacity-80 hover:opacity-100 transition-opacity duration-300"
           >
             <Image
-              src="/images/aideaflux-logo.png"
+              src="/images/AIdeaFlux_icon.png"
               alt="AideaFlux"
               width={32}
               height={32}

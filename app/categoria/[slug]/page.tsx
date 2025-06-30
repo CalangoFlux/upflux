@@ -9,10 +9,11 @@ import Link from "next/link"
 import Footer from "@/components/footer"
 import Image from "next/image"
 
-// Dados completos das categorias
+// Dados completos das categorias com ícones
 const categoryData = {
   generalistas: {
     name: "AI Productivity Tools",
+    iconSrc: "/images/icons/processor.png",
     description: "Ferramentas de IA generalistas para aumentar sua produtividade e automatizar tarefas do dia a dia.",
     tools: [
       {
@@ -119,6 +120,7 @@ const categoryData = {
   },
   programacao: {
     name: "AI Code Tools",
+    iconSrc: "/images/icons/code-tools.png",
     description: "Ferramentas especializadas em programação, desenvolvimento e análise de código.",
     tools: [
       {
@@ -141,90 +143,11 @@ const categoryData = {
         rating: 4.5,
         users: "500K+",
       },
-      {
-        name: "PanGu-Coder",
-        company: "Huawei",
-        description: "Modelo para geração e explicação de código.",
-        link: "https://huggingface.co/huawei-noah/CodePangu",
-        features: ["Geração", "Explicação", "Chinês"],
-        pricing: "Gratuito",
-        rating: 4.3,
-        users: "300K+",
-      },
-      {
-        name: "CodeGeeX2",
-        company: "Tsinghua University",
-        description: "Multilíngue, open source, suporta mais de 20 linguagens de programação.",
-        link: "https://huggingface.co/THUDM/codegeex2-6b",
-        features: ["20+ Linguagens", "Open Source", "Multilíngue"],
-        pricing: "Gratuito",
-        rating: 4.4,
-        users: "400K+",
-      },
-      {
-        name: "SberCode",
-        company: "Sber",
-        description: "Automação e geração de código para o mercado russo.",
-        link: "https://ai.sber.ru/projects/sbercode",
-        features: ["Automação", "Russo", "Empresarial"],
-        pricing: "Pago",
-        rating: 4.1,
-        users: "200K+",
-      },
-      {
-        name: "AlphaCode",
-        company: "DeepMind",
-        description: "Modelo para resolução de problemas de programação competitiva.",
-        link: "https://deepmind.com/research/highlighted-research/alphacode",
-        features: ["Competitivo", "Resolução", "DeepMind"],
-        pricing: "Pesquisa",
-        rating: 4.6,
-        users: "100K+",
-      },
-      {
-        name: "StarCoderBase",
-        company: "BigCode",
-        description: "LLM de código open-source, forte em bases de código multilíngues.",
-        link: "https://huggingface.co/bigcode/starcoderbase",
-        features: ["Open Source", "Multilíngue", "BigCode"],
-        pricing: "Gratuito",
-        rating: 4.5,
-        users: "600K+",
-      },
-      {
-        name: "CodeParrot",
-        company: "Hugging Face",
-        description: "Open source, treinado em grandes volumes de código do GitHub.",
-        link: "https://huggingface.co/codeparrot",
-        features: ["GitHub", "Open Source", "Hugging Face"],
-        pricing: "Gratuito",
-        rating: 4.2,
-        users: "250K+",
-      },
-      {
-        name: "Jais Code",
-        company: "Technology Innovation Institute",
-        description: "Modelo de geração de código dos Emirados, otimizado para árabe e inglês.",
-        link: "https://jais.tii.ae/",
-        features: ["Árabe", "Inglês", "Geração"],
-        pricing: "Gratuito",
-        rating: 4.0,
-        users: "150K+",
-      },
-      {
-        name: "Falcon Code",
-        company: "Technology Innovation Institute",
-        description: "LLM de código open-source dos Emirados, forte em Python e JavaScript.",
-        link: "https://huggingface.co/tiiuae/falcon-40b-instruct",
-        features: ["Python", "JavaScript", "Open Source"],
-        pricing: "Gratuito",
-        rating: 4.3,
-        users: "350K+",
-      },
     ],
   },
   negocios: {
     name: "AI Business Tools",
+    iconSrc: "/images/icons/business-tools.png",
     description: "Ferramentas de IA para otimizar processos de negócios.",
     tools: [
       {
@@ -251,6 +174,7 @@ const categoryData = {
   },
   educacao: {
     name: "AI Education Tools",
+    iconSrc: "/images/icons/thinking.png",
     description: "Ferramentas de IA para educação e aprendizado.",
     tools: [
       {
@@ -277,6 +201,7 @@ const categoryData = {
   },
   multimodais: {
     name: "AI Multimodal Tools",
+    iconSrc: "/images/icons/video-tools.png",
     description: "Ferramentas que processam múltiplos tipos de mídia.",
     tools: [
       {
@@ -303,6 +228,7 @@ const categoryData = {
   },
   idiomas: {
     name: "AI Translation Tools",
+    iconSrc: "/images/icons/audio-waveform.png",
     description: "Ferramentas especializadas em tradução e idiomas.",
     tools: [
       {
@@ -329,6 +255,7 @@ const categoryData = {
   },
   "codigo-aberto": {
     name: "Open Source AI Tools",
+    iconSrc: "/images/icons/chatbot.png",
     description: "Projetos de código aberto para adaptação e uso próprio.",
     tools: [
       {
@@ -355,6 +282,7 @@ const categoryData = {
   },
   imagens: {
     name: "AI Image Tools",
+    iconSrc: "/images/icons/ai-puzzle.png",
     description: "Ferramentas de IA para criar e editar imagens.",
     tools: [
       {
@@ -486,7 +414,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <Image
-                  src="/images/aideaflux-logo.png"
+                  src="/images/AIdeaFlux_icon.png"
                   alt="AideaFlux"
                   width={40}
                   height={40}
@@ -559,6 +487,19 @@ export default function CategoryPage({ params }: CategoryPageProps) {
           className={`mb-16 transition-all duration-1000 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}
         >
           <div className="max-w-7xl mx-auto text-center mb-8">
+            {/* Ícone da categoria */}
+            <div className="flex justify-center mb-8">
+              <div className="w-24 h-24 flex items-center justify-center">
+                <Image
+                  src={category.iconSrc || "/placeholder.svg"}
+                  alt={category.name}
+                  width={64}
+                  height={64}
+                  className="category-icon"
+                />
+              </div>
+            </div>
+
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
                 {category.name}
@@ -663,7 +604,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
               Descubra outras ferramentas de IA que podem transformar seu trabalho
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/">
+              <Link href="/categorias">
                 <Button className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-black px-8 py-3 rounded-xl text-lg font-bold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 hover:scale-105 transition-all duration-300">
                   Ver Todas as Categorias
                 </Button>

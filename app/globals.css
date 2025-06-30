@@ -226,6 +226,30 @@ body {
   animation: gradient-x 3s ease infinite;
 }
 
+/* Filtro unificado para ícones das categorias - Tom azul AideaFlux */
+.category-icon {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(184deg) brightness(119%)
+    contrast(119%);
+  transition: all 0.3s ease;
+}
+
+.category-icon:hover {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(1352%) hue-rotate(184deg) brightness(140%)
+    contrast(130%);
+  transform: scale(1.1);
+}
+
+/* Glow effect unificado para ícones */
+.category-icon-glow {
+  background: radial-gradient(
+    circle,
+    rgba(6, 182, 212, 0.6) 0%,
+    rgba(6, 182, 212, 0.4) 50%,
+    rgba(6, 182, 212, 0.2) 70%,
+    transparent 100%
+  );
+}
+
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 8px;

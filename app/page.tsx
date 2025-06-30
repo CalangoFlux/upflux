@@ -1,22 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import {
-  Menu,
-  X,
-  ArrowRight,
-  ImageIcon,
-  Briefcase,
-  Zap,
-  Type,
-  Play,
-  Code,
-  Palette,
-  Volume2,
-  Settings,
-  ExternalLink,
-  Search,
-} from "lucide-react"
+import { Menu, X, ArrowRight, ExternalLink, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -68,13 +53,13 @@ export default function Home() {
     setIsLoaded(true)
   }, [])
 
-  // Categorias com cores vibrantes
+  // Categorias com ícones personalizados
   const aiCategories = [
     {
       id: 1,
       name: "AI Image Tools",
       slug: "imagens",
-      icon: <ImageIcon className="w-8 h-8" />,
+      iconSrc: "/images/icons/ai-puzzle.png",
       count: 10,
       description: "Ferramentas de IA para criar e editar imagens.",
       tools: ["DALL-E 3", "Midjourney", "Stable Diffusion"],
@@ -85,7 +70,7 @@ export default function Home() {
       id: 2,
       name: "AI Business Tools",
       slug: "negocios",
-      icon: <Briefcase className="w-8 h-8" />,
+      iconSrc: "/images/icons/business-tools.png",
       count: 9,
       description: "Ferramentas de IA para otimizar processos de negócios.",
       tools: ["Jasper", "Copy.ai", "Notion AI"],
@@ -96,7 +81,7 @@ export default function Home() {
       id: 3,
       name: "AI Productivity Tools",
       slug: "generalistas",
-      icon: <Zap className="w-8 h-8" />,
+      iconSrc: "/images/icons/processor.png",
       count: 10,
       description: "Ferramentas de IA para aumentar a produtividade pessoal.",
       tools: ["GPT-4o", "Claude", "Gemini"],
@@ -107,7 +92,7 @@ export default function Home() {
       id: 4,
       name: "AI Text Generators",
       slug: "educacao",
-      icon: <Type className="w-8 h-8" />,
+      iconSrc: "/images/icons/thinking.png",
       count: 10,
       description: "Ferramentas de IA para gerar texto automaticamente.",
       tools: ["ChatGPT", "Writesonic", "QuillBot"],
@@ -118,7 +103,7 @@ export default function Home() {
       id: 5,
       name: "AI Video Tools",
       slug: "multimodais",
-      icon: <Play className="w-8 h-8" />,
+      iconSrc: "/images/icons/video-tools.png",
       count: 10,
       description: "Ferramentas de IA para criar e editar vídeos.",
       tools: ["RunwayML", "Synthesia", "Descript"],
@@ -129,7 +114,7 @@ export default function Home() {
       id: 6,
       name: "AI Code Tools",
       slug: "programacao",
-      icon: <Code className="w-8 h-8" />,
+      iconSrc: "/images/icons/code-tools.png",
       count: 10,
       description: "Ferramentas de IA para auxiliar na programação.",
       tools: ["GitHub Copilot", "Tabnine", "Codeium"],
@@ -140,7 +125,7 @@ export default function Home() {
       id: 7,
       name: "AI Art Generators",
       slug: "imagens",
-      icon: <Palette className="w-8 h-8" />,
+      iconSrc: "/images/icons/cube-3d.png",
       count: 10,
       description: "Ferramentas de IA para gerar arte digital.",
       tools: ["NightCafe", "StarryAI", "Leonardo"],
@@ -151,7 +136,7 @@ export default function Home() {
       id: 8,
       name: "Audio Generator",
       slug: "multimodais",
-      icon: <Volume2 className="w-8 h-8" />,
+      iconSrc: "/images/icons/audio-generator.png",
       count: 8,
       description: "Ferramentas de IA para gerar e editar áudio.",
       tools: ["Murf AI", "ElevenLabs", "Resemble"],
@@ -162,7 +147,7 @@ export default function Home() {
       id: 9,
       name: "Misc AI Tools",
       slug: "codigo-aberto",
-      icon: <Settings className="w-8 h-8" />,
+      iconSrc: "/images/icons/chatbot.png",
       count: 10,
       description: "Outras ferramentas de IA diversas.",
       tools: ["Hugging Face", "Replicate", "Cohere"],
@@ -173,7 +158,7 @@ export default function Home() {
       id: 10,
       name: "AI Translation Tools",
       slug: "idiomas",
-      icon: <Type className="w-8 h-8" />,
+      iconSrc: "/images/icons/audio-waveform.png",
       count: 10,
       description: "Ferramentas de IA para tradução e idiomas.",
       tools: ["DeepL", "Google Translate", "Papago"],
@@ -214,7 +199,7 @@ export default function Home() {
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <Image
-                  src="/images/aideaflux-logo.png"
+                  src="/images/AIdeaFlux_icon.png"
                   alt="AideaFlux"
                   width={40}
                   height={40}
@@ -410,16 +395,16 @@ export default function Home() {
                       className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-10 transition-opacity duration-700 rounded-lg`}
                     ></div>
 
-                    <div
-                      className={`relative w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${category.color} rounded-3xl flex items-center justify-center shadow-lg shadow-black/20 group-hover:scale-110 group-hover:shadow-xl transition-all duration-500 group-hover:rotate-12`}
-                    >
-                      <div className="text-white group-hover:scale-110 transition-transform duration-300">
-                        {category.icon}
-                      </div>
-                      {/* Icon glow */}
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-3xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500`}
-                      ></div>
+                    <div className="relative w-20 h-20 mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-all duration-500 group-hover:rotate-12">
+                      <Image
+                        src={category.iconSrc || "/placeholder.svg"}
+                        alt={category.name}
+                        width={48}
+                        height={48}
+                        className="category-icon group-hover:scale-110 transition-transform duration-300"
+                      />
+                      {/* Icon glow effect */}
+                      <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-40 transition-opacity duration-500 blur-lg category-icon-glow"></div>
                     </div>
 
                     <h3 className="font-bold text-xl mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300">
