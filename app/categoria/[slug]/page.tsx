@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import Footer from "@/components/footer"
+import Image from "next/image"
 
 // Dados completos das categorias
 const categoryData = {
@@ -484,14 +485,17 @@ export default function CategoryPage({ params }: CategoryPageProps) {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50 group-hover:shadow-cyan-400/70 transition-all duration-300 group-hover:scale-110">
-                  <span className="text-black font-bold text-xl">U</span>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-xl blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <Image
+                  src="/images/aideaflux-logo.png"
+                  alt="AideaFlux"
+                  width={40}
+                  height={40}
+                  className="group-hover:scale-110 transition-all duration-300"
+                />
               </div>
               <div>
                 <span className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
-                  UpFlux
+                  AideaFlux
                 </span>
                 <p className="text-xs text-cyan-400/80">AI Platform</p>
               </div>

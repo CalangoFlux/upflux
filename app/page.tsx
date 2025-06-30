@@ -22,8 +22,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import Footer from "@/components/footer"
+import Image from "next/image"
 
-export default function UpFluxHome() {
+export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isLoaded, setIsLoaded] = useState(false)
@@ -212,14 +213,17 @@ export default function UpFluxHome() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50 group-hover:shadow-cyan-400/70 transition-all duration-300 group-hover:scale-110">
-                  <span className="text-black font-bold text-xl">U</span>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-xl blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-300"></div>
+                <Image
+                  src="/images/aideaflux-logo.png"
+                  alt="AideaFlux"
+                  width={40}
+                  height={40}
+                  className="group-hover:scale-110 transition-all duration-300"
+                />
               </div>
               <div>
                 <span className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
-                  UpFlux
+                  AideaFlux
                 </span>
                 <p className="text-xs text-cyan-400/80">AI Platform</p>
               </div>
@@ -460,7 +464,7 @@ export default function UpFluxHome() {
         >
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">
-              UpFlux em Números
+              AideaFlux em Números
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[

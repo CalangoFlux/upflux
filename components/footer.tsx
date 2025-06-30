@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Github, Twitter, Instagram, Linkedin, MessageCircle, Phone, Globe } from "lucide-react"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -12,11 +13,15 @@ export default function Footer() {
             href="/"
             className="flex items-center space-x-3 opacity-80 hover:opacity-100 transition-opacity duration-300"
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-lg">U</span>
-            </div>
+            <Image
+              src="/images/aideaflux-logo.png"
+              alt="AideaFlux"
+              width={32}
+              height={32}
+              className="hover:scale-110 transition-transform duration-300"
+            />
             <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
-              UpFlux
+              AideaFlux
             </span>
           </Link>
 
@@ -82,7 +87,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-center text-sm text-gray-500 space-y-2">
-            <p>© 2025 UpFlux. Todos os direitos reservados.</p>
+            <p>© 2025 AideaFlux. Todos os direitos reservados.</p>
             <p className="text-xs">
               Desenvolvido por{" "}
               <a
