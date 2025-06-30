@@ -9,7 +9,7 @@ import Link from "next/link"
 import Footer from "@/components/footer"
 import Image from "next/image"
 
-// Dados completos das categorias com ícones
+// Dados completos das categorias com ícones atualizados
 const categoryData = {
   generalistas: {
     name: "AI Productivity Tools",
@@ -201,7 +201,7 @@ const categoryData = {
   },
   multimodais: {
     name: "AI Multimodal Tools",
-    iconSrc: "/images/icons/video-tools.png",
+    iconSrc: "/images/icons/professional-video-camera.png", // Atualizado
     description: "Ferramentas que processam múltiplos tipos de mídia.",
     tools: [
       {
@@ -228,7 +228,7 @@ const categoryData = {
   },
   idiomas: {
     name: "AI Translation Tools",
-    iconSrc: "/images/icons/audio-waveform.png",
+    iconSrc: "/images/icons/microsoft-translator.png",
     description: "Ferramentas especializadas em tradução e idiomas.",
     tools: [
       {
@@ -253,36 +253,66 @@ const categoryData = {
       },
     ],
   },
-  "codigo-aberto": {
-    name: "Open Source AI Tools",
-    iconSrc: "/images/icons/chatbot.png",
-    description: "Projetos de código aberto para adaptação e uso próprio.",
+  music: {
+    name: "Music AI Tools",
+    iconSrc: "/images/icons/musical-notes.png",
+    description: "Ferramentas de IA para criação e produção musical.",
     tools: [
       {
-        name: "Llama 3",
-        company: "Meta",
-        description: "Código aberto, fácil de customizar.",
-        link: "https://llama.meta.com",
-        features: ["Open Source", "Customizável", "Meta"],
-        pricing: "Gratuito",
-        rating: 4.6,
-        users: "5M+",
+        name: "AIVA",
+        company: "AIVA Technologies",
+        description: "Compositor de IA que cria trilhas sonoras originais.",
+        link: "https://aiva.ai",
+        features: ["Composição", "Trilhas Sonoras", "Múltiplos Gêneros"],
+        pricing: "Freemium",
+        rating: 4.5,
+        users: "100K+",
       },
       {
-        name: "Mistral 7B",
-        company: "Mistral AI",
-        description: "Modelos compactos e eficientes.",
-        link: "https://mistral.ai",
-        features: ["Compacto", "Eficiente", "Europeu"],
-        pricing: "Gratuito",
+        name: "Amper Music",
+        company: "Shutterstock",
+        description: "Plataforma de IA para criação de música personalizada.",
+        link: "https://www.ampermusic.com",
+        features: ["Música Personalizada", "Licenciamento", "API"],
+        pricing: "Pago",
+        rating: 4.3,
+        users: "50K+",
+      },
+      {
+        name: "Soundraw",
+        company: "Soundraw",
+        description: "Gerador de música com IA para criadores de conteúdo.",
+        link: "https://soundraw.io",
+        features: ["Royalty-Free", "Customização", "Download"],
+        pricing: "Freemium",
         rating: 4.4,
-        users: "2M+",
+        users: "200K+",
+      },
+      {
+        name: "Mubert",
+        company: "Mubert",
+        description: "IA que gera música ambiente e trilhas em tempo real.",
+        link: "https://mubert.com",
+        features: ["Tempo Real", "Streaming", "API"],
+        pricing: "Freemium",
+        rating: 4.2,
+        users: "1M+",
+      },
+      {
+        name: "Boomy",
+        company: "Boomy",
+        description: "Crie e publique música original com IA em minutos.",
+        link: "https://boomy.com",
+        features: ["Criação Rápida", "Publicação", "Monetização"],
+        pricing: "Freemium",
+        rating: 4.1,
+        users: "500K+",
       },
     ],
   },
   imagens: {
     name: "AI Image Tools",
-    iconSrc: "/images/icons/ai-puzzle.png",
+    iconSrc: "/images/icons/paint-palette.png",
     description: "Ferramentas de IA para criar e editar imagens.",
     tools: [
       {

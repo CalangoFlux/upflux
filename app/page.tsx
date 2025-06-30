@@ -53,13 +53,13 @@ export default function Home() {
     setIsLoaded(true)
   }, [])
 
-  // Categorias com ícones personalizados
+  // Categorias com ícones atualizados
   const aiCategories = [
     {
       id: 1,
       name: "AI Image Tools",
       slug: "imagens",
-      iconSrc: "/images/icons/ai-puzzle.png",
+      iconSrc: "/images/icons/ai-generated-image.png",
       count: 10,
       description: "Ferramentas de IA para criar e editar imagens.",
       tools: ["DALL-E 3", "Midjourney", "Stable Diffusion"],
@@ -103,7 +103,7 @@ export default function Home() {
       id: 5,
       name: "AI Video Tools",
       slug: "multimodais",
-      iconSrc: "/images/icons/video-tools.png",
+      iconSrc: "/images/icons/professional-video-camera.png", // Atualizado
       count: 10,
       description: "Ferramentas de IA para criar e editar vídeos.",
       tools: ["RunwayML", "Synthesia", "Descript"],
@@ -125,7 +125,7 @@ export default function Home() {
       id: 7,
       name: "AI Art Generators",
       slug: "imagens",
-      iconSrc: "/images/icons/cube-3d.png",
+      iconSrc: "/images/icons/paint-palette.png",
       count: 10,
       description: "Ferramentas de IA para gerar arte digital.",
       tools: ["NightCafe", "StarryAI", "Leonardo"],
@@ -136,7 +136,7 @@ export default function Home() {
       id: 8,
       name: "Audio Generator",
       slug: "multimodais",
-      iconSrc: "/images/icons/audio-generator.png",
+      iconSrc: "/images/icons/ai-generated-sound.png",
       count: 8,
       description: "Ferramentas de IA para gerar e editar áudio.",
       tools: ["Murf AI", "ElevenLabs", "Resemble"],
@@ -145,12 +145,12 @@ export default function Home() {
     },
     {
       id: 9,
-      name: "Misc AI Tools",
-      slug: "codigo-aberto",
-      iconSrc: "/images/icons/chatbot.png",
+      name: "Music AI Tools",
+      slug: "music",
+      iconSrc: "/images/icons/musical-notes.png",
       count: 10,
-      description: "Outras ferramentas de IA diversas.",
-      tools: ["Hugging Face", "Replicate", "Cohere"],
+      description: "Ferramentas de IA para criação e produção musical.",
+      tools: ["AIVA", "Amper Music", "Soundraw"],
       color: "from-amber-500 via-yellow-500 to-lime-500",
       glowColor: "amber",
     },
@@ -158,7 +158,7 @@ export default function Home() {
       id: 10,
       name: "AI Translation Tools",
       slug: "idiomas",
-      iconSrc: "/images/icons/audio-waveform.png",
+      iconSrc: "/images/icons/microsoft-translator.png",
       count: 10,
       description: "Ferramentas de IA para tradução e idiomas.",
       tools: ["DeepL", "Google Translate", "Papago"],
