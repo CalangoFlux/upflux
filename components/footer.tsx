@@ -25,6 +25,12 @@ export default function Footer() {
             </span>
           </Link>
 
+          {/* Tagline */}
+          <p className="text-center text-gray-400 max-w-md">
+            Conectando você às melhores ferramentas de inteligência artificial para transformar suas ideias em
+            realidade.
+          </p>
+
           {/* Social Links */}
           <div className="flex items-center space-x-6">
             <a
@@ -32,6 +38,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-green-400 transition-colors duration-300"
+              aria-label="WhatsApp"
             >
               <Phone className="w-4 h-4" />
             </a>
@@ -40,46 +47,52 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-blue-400 transition-colors duration-300"
+              aria-label="Telegram"
             >
               <MessageCircle className="w-4 h-4" />
             </a>
             <a
-              href="https://github.com/calangoflux"
+              href="https://github.com/aideaflux"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-300 transition-colors duration-300"
+              aria-label="GitHub"
             >
               <Github className="w-4 h-4" />
             </a>
             <a
-              href="https://twitter.com/calangoflux"
+              href="https://twitter.com/aideaflux"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-blue-400 transition-colors duration-300"
+              aria-label="Twitter"
             >
               <Twitter className="w-4 h-4" />
             </a>
             <a
-              href="https://instagram.com/calangoflux"
+              href="https://instagram.com/aideaflux"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-pink-400 transition-colors duration-300"
+              aria-label="Instagram"
             >
               <Instagram className="w-4 h-4" />
             </a>
             <a
-              href="https://linkedin.com/company/calangoflux"
+              href="https://linkedin.com/company/aideaflux"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-blue-500 transition-colors duration-300"
+              aria-label="LinkedIn"
             >
               <Linkedin className="w-4 h-4" />
             </a>
             <a
-              href="https://www.calangoflux.xyz"
+              href="https://www.aidea.flux.xyz"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-teal-400 transition-colors duration-300"
+              aria-label="Website"
             >
               <Globe className="w-4 h-4" />
             </a>
@@ -89,15 +102,7 @@ export default function Footer() {
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>© 2025 AideaFlux. Todos os direitos reservados.</p>
             <p className="text-xs">
-              Desenvolvido por{" "}
-              <a
-                href="https://www.calangoflux.xyz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal-400/80 hover:text-teal-400 transition-colors duration-300"
-              >
-                CalangoFlux
-              </a>
+              Uma plataforma dedicada ao futuro da <span className="text-teal-400/80">inteligência artificial</span>
             </p>
           </div>
         </div>

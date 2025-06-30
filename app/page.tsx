@@ -61,7 +61,7 @@ export default function Home() {
       slug: "imagens",
       iconSrc: "/images/icons/ai-generated-image.png",
       count: 10,
-      description: "Ferramentas de IA para criar e editar imagens.",
+      description: "Transforme ideias em imagens impressionantes com ferramentas de IA avançadas.",
       tools: ["DALL-E 3", "Midjourney", "Stable Diffusion"],
       color: "from-orange-500 via-red-500 to-pink-500",
       glowColor: "orange",
@@ -72,7 +72,7 @@ export default function Home() {
       slug: "negocios",
       iconSrc: "/images/icons/business-tools.png",
       count: 9,
-      description: "Ferramentas de IA para otimizar processos de negócios.",
+      description: "Revolucione seus processos empresariais com inteligência artificial estratégica.",
       tools: ["Jasper", "Copy.ai", "Notion AI"],
       color: "from-purple-500 via-violet-500 to-indigo-500",
       glowColor: "purple",
@@ -83,7 +83,7 @@ export default function Home() {
       slug: "generalistas",
       iconSrc: "/images/icons/processor.png",
       count: 10,
-      description: "Ferramentas de IA para aumentar a produtividade pessoal.",
+      description: "Maximize sua eficiência com assistentes de IA que potencializam sua produtividade.",
       tools: ["GPT-4o", "Claude", "Gemini"],
       color: "from-emerald-500 via-teal-500 to-cyan-500",
       glowColor: "emerald",
@@ -94,7 +94,7 @@ export default function Home() {
       slug: "educacao",
       iconSrc: "/images/icons/thinking.png",
       count: 10,
-      description: "Ferramentas de IA para gerar texto automaticamente.",
+      description: "Crie conteúdo excepcional com geradores de texto alimentados por IA.",
       tools: ["ChatGPT", "Writesonic", "QuillBot"],
       color: "from-blue-500 via-indigo-500 to-purple-500",
       glowColor: "blue",
@@ -103,9 +103,9 @@ export default function Home() {
       id: 5,
       name: "AI Video Tools",
       slug: "multimodais",
-      iconSrc: "/images/icons/professional-video-camera.png", // Atualizado
+      iconSrc: "/images/icons/professional-video-camera.png",
       count: 10,
-      description: "Ferramentas de IA para criar e editar vídeos.",
+      description: "Produza vídeos profissionais com tecnologia de IA cinematográfica.",
       tools: ["RunwayML", "Synthesia", "Descript"],
       color: "from-red-500 via-orange-500 to-yellow-500",
       glowColor: "red",
@@ -116,7 +116,7 @@ export default function Home() {
       slug: "programacao",
       iconSrc: "/images/icons/code-tools.png",
       count: 10,
-      description: "Ferramentas de IA para auxiliar na programação.",
+      description: "Acelere seu desenvolvimento com assistentes de programação inteligentes.",
       tools: ["GitHub Copilot", "Tabnine", "Codeium"],
       color: "from-slate-500 via-gray-500 to-zinc-500",
       glowColor: "slate",
@@ -127,7 +127,7 @@ export default function Home() {
       slug: "imagens",
       iconSrc: "/images/icons/paint-palette.png",
       count: 10,
-      description: "Ferramentas de IA para gerar arte digital.",
+      description: "Libere sua criatividade artística com geradores de arte digital por IA.",
       tools: ["NightCafe", "StarryAI", "Leonardo"],
       color: "from-pink-500 via-rose-500 to-red-500",
       glowColor: "pink",
@@ -138,7 +138,7 @@ export default function Home() {
       slug: "multimodais",
       iconSrc: "/images/icons/ai-generated-sound.png",
       count: 8,
-      description: "Ferramentas de IA para gerar e editar áudio.",
+      description: "Crie paisagens sonoras únicas com tecnologia de áudio inteligente.",
       tools: ["Murf AI", "ElevenLabs", "Resemble"],
       color: "from-teal-500 via-emerald-500 to-green-500",
       glowColor: "teal",
@@ -149,7 +149,7 @@ export default function Home() {
       slug: "music",
       iconSrc: "/images/icons/musical-notes.png",
       count: 10,
-      description: "Ferramentas de IA para criação e produção musical.",
+      description: "Componha trilhas sonoras originais com compositores de IA avançados.",
       tools: ["AIVA", "Amper Music", "Soundraw"],
       color: "from-amber-500 via-yellow-500 to-lime-500",
       glowColor: "amber",
@@ -160,7 +160,7 @@ export default function Home() {
       slug: "idiomas",
       iconSrc: "/images/icons/microsoft-translator.png",
       count: 10,
-      description: "Ferramentas de IA para tradução e idiomas.",
+      description: "Quebre barreiras linguísticas com tradutores de IA de precisão profissional.",
       tools: ["DeepL", "Google Translate", "Papago"],
       color: "from-indigo-500 via-blue-500 to-cyan-500",
       glowColor: "indigo",
@@ -210,18 +210,18 @@ export default function Home() {
                 <span className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
                   AideaFlux
                 </span>
-                <p className="text-xs text-cyan-400/80">AI Platform</p>
+                <p className="text-xs text-cyan-400/80">Plataforma de IA</p>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {["Home", "AI Tools Directory", "AI Courses", "Blog", "Contact Us"].map((item, index) => (
+              {["Início", "Diretório de IA", "Cursos de IA", "Blog", "Contato"].map((item, index) => (
                 <Link
                   key={item}
-                  href={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={item === "Início" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-").replace("ç", "c")}`}
                   className={`relative group transition-all duration-300 ${
-                    item === "Home" ? "text-cyan-400" : "text-gray-300 hover:text-cyan-400"
+                    item === "Início" ? "text-cyan-400" : "text-gray-300 hover:text-cyan-400"
                   }`}
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
@@ -237,10 +237,10 @@ export default function Home() {
                 variant="ghost"
                 className="text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all duration-300"
               >
-                Login
+                Entrar
               </Button>
               <Button className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-black font-semibold px-6 py-2 rounded-full shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 hover:scale-105 transition-all duration-300">
-                Sign Up
+                Cadastrar
               </Button>
             </div>
 
@@ -260,12 +260,12 @@ export default function Home() {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-white/10 bg-black/40 backdrop-blur-xl">
             <nav className="flex flex-col p-6 space-y-4">
-              {["Home", "AI Tools Directory", "AI Courses", "Blog", "Contact Us"].map((item) => (
+              {["Início", "Diretório de IA", "Cursos de IA", "Blog", "Contato"].map((item) => (
                 <Link
                   key={item}
-                  href={item === "Home" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-")}`}
+                  href={item === "Início" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-").replace("ç", "c")}`}
                   className={`transition-colors duration-300 ${
-                    item === "Home" ? "text-cyan-400" : "text-gray-300 hover:text-cyan-400"
+                    item === "Início" ? "text-cyan-400" : "text-gray-300 hover:text-cyan-400"
                   }`}
                 >
                   {item}
@@ -276,10 +276,10 @@ export default function Home() {
                   variant="ghost"
                   className="text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10 justify-start"
                 >
-                  Login
+                  Entrar
                 </Button>
                 <Button className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-black font-semibold">
-                  Sign Up
+                  Cadastrar
                 </Button>
               </div>
             </nav>
@@ -327,23 +327,25 @@ export default function Home() {
           className={`text-center mb-20 transition-all duration-1500 delay-300 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}
         >
           <h1 className="text-6xl lg:text-8xl font-bold mb-8 leading-tight">
-            Descubra as Melhores
+            O Futuro da
             <br />
             <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent animate-gradient-x">
-              Ferramentas de IA
+              Inteligência Artificial
             </span>
           </h1>
 
           <p className="text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Explore mais de <span className="text-cyan-400 font-semibold">95+ ferramentas</span> de inteligência
-            artificial organizadas em <span className="text-teal-400 font-semibold">10 categorias</span> especializadas
+            Descubra, explore e domine as{" "}
+            <span className="text-cyan-400 font-semibold">95+ melhores ferramentas de IA</span> do mercado, organizadas
+            em <span className="text-teal-400 font-semibold">10 categorias especializadas</span> para transformar seu
+            trabalho
           </p>
 
           {/* Search Bar */}
           <div className="relative w-full max-w-3xl mb-12 mx-auto group">
             <Input
               type="text"
-              placeholder="Pesquise por ferramentas, categorias ou funcionalidades..."
+              placeholder="Busque por ferramentas, categorias ou funcionalidades específicas..."
               className="w-full h-16 pl-8 pr-16 bg-white/5 backdrop-blur-md border-2 border-white/20 text-white placeholder-gray-400 rounded-2xl text-lg focus:border-cyan-400/60 focus:ring-cyan-400/30 shadow-lg shadow-black/20 group-hover:border-white/30 transition-all duration-300"
             />
             <Button
@@ -363,17 +365,17 @@ export default function Home() {
             <div>
               <h2 className="text-5xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
-                  AI
+                  Categorias
                 </span>{" "}
-                Categories
+                Especializadas
               </h2>
-              <p className="text-xl text-gray-400">Categorias especializadas para cada necessidade</p>
+              <p className="text-xl text-gray-400">Ferramentas organizadas para cada necessidade específica</p>
             </div>
             <Link
               href="/categorias"
               className="hidden md:flex items-center text-cyan-400 hover:text-cyan-300 transition-all duration-300 group text-lg font-medium"
             >
-              Ver Todas as Categorias
+              Explorar Todas
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>
@@ -453,9 +455,9 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {[
-                { number: "95+", label: "Ferramentas de IA", color: "text-cyan-400" },
+                { number: "95+", label: "Ferramentas Curadas", color: "text-cyan-400" },
                 { number: "10", label: "Categorias Especializadas", color: "text-teal-400" },
-                { number: "100%", label: "Gratuito e Atualizado", color: "text-emerald-400" },
+                { number: "100%", label: "Acesso Gratuito", color: "text-emerald-400" },
               ].map((stat, index) => (
                 <div key={index} className="space-y-3 group">
                   <div
@@ -475,15 +477,16 @@ export default function Home() {
           className={`text-center mt-32 py-20 transition-all duration-1000 delay-1200 ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"}`}
         >
           <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-teal-400 to-emerald-400 bg-clip-text text-transparent">
-            Pronto para Explorar o Futuro da IA?
+            Transforme Suas Ideias em Realidade
           </h2>
           <p className="text-xl mb-12 text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Descubra as ferramentas que estão transformando o mundo e encontre a solução perfeita para suas necessidades
+            Junte-se à revolução da IA e descubra ferramentas que estão redefinindo o futuro do trabalho, criatividade e
+            inovação
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/categorias">
               <Button className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-black px-10 py-4 rounded-2xl text-lg font-bold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-400/40 hover:scale-105 transition-all duration-300">
-                Explorar Todas as Categorias
+                Começar Agora
                 <ArrowRight className="ml-3 h-5 w-5" />
               </Button>
             </Link>
@@ -492,7 +495,7 @@ export default function Home() {
                 variant="outline"
                 className="border-2 border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 hover:border-cyan-400 px-10 py-4 rounded-2xl text-lg font-bold bg-transparent hover:scale-105 transition-all duration-300 backdrop-blur-sm"
               >
-                Ver Todas as Ferramentas
+                Explorar Ferramentas
               </Button>
             </Link>
           </div>

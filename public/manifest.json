@@ -1,0 +1,35 @@
+{
+  "name": "AideaFlux - Plataforma de Ferramentas de IA",
+  "short_name": "AideaFlux",
+  "description": "Descubra as melhores ferramentas de inteligência artificial organizadas por categorias especializadas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/AIdeaFlux_icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/AIdeaFlux_icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["productivity", "technology", "artificial-intelligence"],
+  "lang": "pt-BR",
+  "scope": "/",
+  "screenshots": [
+    {
+      "src": "/images/aideaflux-logo.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "AideaFlux - Página Inicial"
+    }
+  ]
+}
