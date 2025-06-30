@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
+import Footer from "@/components/footer"
 
 export default function UpFluxHome() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -508,6 +509,9 @@ export default function UpFluxHome() {
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
   )
 }
