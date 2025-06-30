@@ -1,0 +1,297 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
+  background: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 120 100% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+/* Enhanced Hexagonal Pattern Background */
+.bg-hexagon-pattern {
+  background-image: radial-gradient(circle at 25px 25px, rgba(6, 182, 212, 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 75px 75px, rgba(20, 184, 166, 0.06) 1px, transparent 1px),
+    linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(6, 182, 212, 0.02) 25%,
+      rgba(6, 182, 212, 0.02) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(20, 184, 166, 0.02) 75%,
+      rgba(20, 184, 166, 0.02) 76%,
+      transparent 77%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      rgba(6, 182, 212, 0.02) 25%,
+      rgba(6, 182, 212, 0.02) 26%,
+      transparent 27%,
+      transparent 74%,
+      rgba(20, 184, 166, 0.02) 75%,
+      rgba(20, 184, 166, 0.02) 76%,
+      transparent 77%
+    );
+  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+  background-position: 0 0, 50px 50px, 0 0, 0 0;
+}
+
+/* Galaxy Banner Animation */
+.galaxy-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: galaxyRotate 100s linear infinite;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 4s ease-in-out infinite alternate, orbit 60s linear infinite;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+.star:nth-child(2n) {
+  background: rgba(6, 182, 212, 0.8);
+  box-shadow: 0 0 6px rgba(6, 182, 212, 0.8);
+}
+
+.star:nth-child(3n) {
+  background: rgba(20, 184, 166, 0.8);
+  box-shadow: 0 0 6px rgba(20, 184, 166, 0.8);
+}
+
+.star:nth-child(4n) {
+  width: 1px;
+  height: 1px;
+}
+
+.star:nth-child(5n) {
+  width: 3px;
+  height: 3px;
+}
+
+/* Nebula Central para Banner */
+.nebula-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+}
+
+.nebula-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.4) 0%, rgba(20, 184, 166, 0.3) 50%, transparent 100%);
+  border-radius: 50%;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.nebula-ring-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(6, 182, 212, 0.1);
+  border-radius: 50%;
+  animation: rotate 30s linear infinite;
+}
+
+.nebula-ring-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border: 1px solid rgba(20, 184, 166, 0.08);
+  border-radius: 50%;
+  animation: rotate 45s linear infinite reverse;
+}
+
+.nebula-ring-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  border: 1px solid rgba(6, 182, 212, 0.05);
+  border-radius: 50%;
+  animation: rotate 60s linear infinite;
+}
+
+/* Animations */
+@keyframes galaxyRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes gradient-x {
+  0%,
+  100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(6, 182, 212, 0.6), rgba(20, 184, 166, 0.6));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, rgba(6, 182, 212, 0.8), rgba(20, 184, 166, 0.8));
+}
+
+/* Enhanced Glassmorphism */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+    transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Performance optimizations */
+.star,
+.nebula-core,
+.nebula-ring-1,
+.nebula-ring-2,
+.nebula-ring-3 {
+  will-change: transform;
+}
+
+/* Hover effects */
+.group:hover .group-hover\:scale-110 {
+  transform: scale(1.1);
+}
+
+.group:hover .group-hover\:rotate-12 {
+  transform: rotate(12deg) scale(1.1);
+}
+
+.group:hover .group-hover\:translate-x-1 {
+  transform: translateX(0.25rem);
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
