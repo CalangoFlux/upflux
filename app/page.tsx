@@ -216,19 +216,38 @@ export default function Home() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {["Início", "Diretório de IA", "Cursos de IA", "Blog", "Contato"].map((item, index) => (
-                <Link
-                  key={item}
-                  href={item === "Início" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-").replace("ç", "c")}`}
-                  className={`relative group transition-all duration-300 ${
-                    item === "Início" ? "text-cyan-400" : "text-gray-300 hover:text-cyan-400"
-                  }`}
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-teal-400 group-hover:w-full transition-all duration-300"></span>
-                </Link>
-              ))}
+              <Link href="/" className="text-cyan-400 transition-all duration-300 relative group">
+                Início
+                <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400 to-teal-400"></span>
+              </Link>
+              <Link
+                href="/diretorio-de-ia"
+                className="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+              >
+                Diretório de IA
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-teal-400 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link
+                href="/cursos-de-ia"
+                className="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+              >
+                Cursos de IA
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-teal-400 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link
+                href="/blog"
+                className="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+              >
+                Blog
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-teal-400 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+              <Link
+                href="/contato"
+                className="text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group"
+              >
+                Contato
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-teal-400 group-hover:w-full transition-all duration-300"></span>
+              </Link>
             </nav>
 
             {/* Auth Buttons */}
@@ -260,17 +279,24 @@ export default function Home() {
         {isMenuOpen && (
           <div className="lg:hidden border-t border-white/10 bg-black/40 backdrop-blur-xl">
             <nav className="flex flex-col p-6 space-y-4">
-              {["Início", "Diretório de IA", "Cursos de IA", "Blog", "Contato"].map((item) => (
-                <Link
-                  key={item}
-                  href={item === "Início" ? "/" : `/${item.toLowerCase().replace(/\s+/g, "-").replace("ç", "c")}`}
-                  className={`transition-colors duration-300 ${
-                    item === "Início" ? "text-cyan-400" : "text-gray-300 hover:text-cyan-400"
-                  }`}
-                >
-                  {item}
-                </Link>
-              ))}
+              <Link href="/" className="text-cyan-400 transition-colors duration-300">
+                Início
+              </Link>
+              <Link
+                href="/diretorio-de-ia"
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              >
+                Diretório de IA
+              </Link>
+              <Link href="/cursos-de-ia" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                Cursos de IA
+              </Link>
+              <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                Blog
+              </Link>
+              <Link href="/contato" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                Contato
+              </Link>
               <div className="flex flex-col space-y-2 pt-4 border-t border-white/10">
                 <Button
                   variant="ghost"
