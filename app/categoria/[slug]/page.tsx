@@ -70,7 +70,7 @@ const categoryData = {
         name: "YaLM 100B",
         company: "Yandex",
         description: "Modelo de 100 bilhões de parâmetros para múltiplas tarefas gerais.",
-        link: "https://yandex.com/company/research/technologies/yalm",
+        link: "https://yandex.com",
         features: ["100B Parâmetros", "Russo", "Multilíngue"],
         pricing: "Gratuito",
         rating: 4.3,
